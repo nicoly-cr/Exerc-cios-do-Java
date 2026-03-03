@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Saudação Dinâmica - JavaScript</title>
-</head>
-<body>
-    
-    <!--Bloco JavaScript - Saudação Dinâmica-->
-
-    <script>
-    
+    <head>
+        <meta charset="UTF-8">
+        <title>Enviando lista para um campo no HTML - JavaScript</title>
+    </head>
+    <body>
         
-    
-    </script>
+        <h2>Nomes Digitados</h2>
 
-</body>
+        <script>
+        
+            let nomes = [];
+                
+                for (let i = 0; i < 3; i++){
+                    let nome = prompt("Digite o nome " + (i + 1) + ":");
+                    nomes.push(nome);
+                }
+                
+                let lista = document.getElementById("listaNomes")
+
+                for(let i = 0 ; i < nomes.length; i++) {
+                    let item = document.createElement("li");
+                    item.innerText = nomes[i];
+                    lista.appendChild(item);
+                }
+        
+        </script>
+
+    </body>
 </html>
